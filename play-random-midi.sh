@@ -17,5 +17,5 @@ for i in {1..1000}; do
   echo Finding a new MIDI to play...
   FILE=`find -iname "*.mid" | shuf | tail -1`
   echo -e "\e[1A\e[K${FILE}"
-  fluidsynth "$SOUNDFONT" "$FILE" -ni -o audio.driver=alsa > /dev/null 2>&1
+  fluidsynth "$SOUNDFONT" "$FILE" -ni -o audio.driver=alsa -o synth.gain=.5 > /dev/null 2>&1
 done
