@@ -5,7 +5,6 @@ SOUNDFONT="/home/vincent/stack/music-creation/samples/GeneralUser GS 1.471/Gener
 
 trap quit INT
 function quit() {
-  killall qsynth
   echo
   echo -e "\e[1A\e[KBye!"
   exit
